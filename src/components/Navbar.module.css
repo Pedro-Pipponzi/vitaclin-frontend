@@ -1,0 +1,60 @@
+.navbar {
+  background: var(--white);
+  border-bottom: 1px solid var(--warm-200);
+  padding: 0 2rem;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: var(--shadow-sm);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brandIcon {
+  color: var(--accent);
+  font-size: 1.2rem;
+}
+
+.brandName {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  letter-spacing: -0.3px;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.greeting {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.logoutBtn {
+  background: none;
+  border: 1.5px solid var(--warm-200);
+  border-radius: var(--radius-sm);
+  padding: 6px 16px;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.logoutBtn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--warm-100);
+}
