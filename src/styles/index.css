@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+:root {
+  --cream: #FAF7F2;
+  --cream-dark: #F2EDE4;
+  --warm-100: #F5ECD7;
+  --warm-200: #E8D5B0;
+  --warm-300: #D4B483;
+  --accent: #C17B3F;
+  --accent-dark: #A3622A;
+  --accent-light: #E8C99A;
+  --green: #5A7A5C;
+  --green-light: #EAF0EA;
+  --text-primary: #2C2416;
+  --text-secondary: #6B5C45;
+  --text-muted: #9E8C75;
+  --white: #FFFFFF;
+  --danger: #C0392B;
+  --danger-light: #FDECEA;
+  --shadow-sm: 0 1px 3px rgba(44, 36, 22, 0.08);
+  --shadow-md: 0 4px 16px rgba(44, 36, 22, 0.10);
+  --shadow-lg: 0 8px 32px rgba(44, 36, 22, 0.13);
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'DM Sans', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--cream);
+  color: var(--text-primary);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--font-body);
+}
+
+input, select, textarea {
+  font-family: var(--font-body);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

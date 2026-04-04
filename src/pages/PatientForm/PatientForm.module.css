@@ -1,0 +1,246 @@
+.page {
+  min-height: 100vh;
+  background: var(--cream);
+}
+
+.main {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem;
+  color: var(--text-muted);
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.backBtn {
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0;
+  transition: opacity 0.15s;
+}
+
+.backBtn:hover {
+  opacity: 0.75;
+}
+
+.sep {
+  color: var(--warm-200);
+}
+
+.card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--warm-200);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.cardHeader {
+  padding: 2rem 2.5rem 1.5rem;
+  border-bottom: 1px solid var(--warm-100);
+  background: var(--cream);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  letter-spacing: -0.3px;
+  margin-bottom: 0.3rem;
+}
+
+.subtitle {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+.errorBox {
+  margin: 1.5rem 2.5rem 0;
+  background: var(--danger-light);
+  border: 1px solid #e8a09a;
+  color: var(--danger);
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+}
+
+.successBox {
+  margin: 1.5rem 2.5rem 0;
+  background: #EAF4EA;
+  border: 1px solid #a3c9a5;
+  color: #2e6b30;
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.form {
+  padding: 2rem 2.5rem;
+}
+
+.section {
+  margin-bottom: 2rem;
+}
+
+.sectionTitle {
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--text-muted);
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--warm-100);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 1rem;
+}
+
+.field:last-child {
+  margin-bottom: 0;
+}
+
+.label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.input {
+  border: 1.5px solid var(--warm-200);
+  border-radius: var(--radius-sm);
+  padding: 11px 14px;
+  font-size: 0.9rem;
+  background: var(--cream);
+  color: var(--text-primary);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+  width: 100%;
+}
+
+.input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(193,123,63,0.1);
+  background: var(--white);
+}
+
+.input::placeholder {
+  color: var(--text-muted);
+}
+
+.inputError {
+  border-color: #e8a09a !important;
+  background: var(--danger-light);
+}
+
+.select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%239E8C75' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 36px;
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 100px;
+  line-height: 1.6;
+}
+
+.errorMsg {
+  font-size: 0.78rem;
+  color: var(--danger);
+  font-weight: 500;
+}
+
+.formFooter {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--warm-100);
+  margin-top: 1rem;
+}
+
+.cancelBtn {
+  background: var(--cream-dark);
+  border: 1px solid var(--warm-200);
+  border-radius: var(--radius-sm);
+  padding: 11px 22px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: all 0.15s;
+}
+
+.cancelBtn:hover {
+  background: var(--warm-200);
+}
+
+.submitBtn {
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 11px 28px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.2s;
+  box-shadow: 0 2px 8px rgba(193,123,63,0.3);
+}
+
+.submitBtn:hover:not(:disabled) {
+  background: var(--accent-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(193,123,63,0.4);
+}
+
+.submitBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+  .main {
+    padding: 1.5rem 1rem;
+  }
+  .cardHeader {
+    padding: 1.5rem;
+  }
+  .form {
+    padding: 1.5rem;
+  }
+  .row {
+    grid-template-columns: 1fr;
+  }
+}
