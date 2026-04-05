@@ -86,6 +86,27 @@ export default function Dashboard() {
           </button>
         </div>
 
+        <div className={styles.stats}>
+          <div className={styles.statCard}>
+            <span className={styles.statNumber}>
+              {patients.filter(p => p.specialty === 'fisioterapia').length}
+            </span>
+            <span className={styles.statLabel}>Fisioterapia</span>
+          </div>
+          <div className={styles.statCard}>
+            <span className={styles.statNumber}>
+              {patients.filter(p => p.specialty === 'nutrição').length}
+            </span>
+            <span className={styles.statLabel}>Nutrição</span>
+          </div>
+          <div className={styles.statCard}>
+            <span className={styles.statNumber}>
+              {patients.filter(p => p.specialty === 'psicologia').length}
+            </span>
+            <span className={styles.statLabel}>Psicologia</span>
+          </div>
+        </div>
+
         <div className={styles.filters}>
           <input
             className={styles.search}
@@ -128,6 +149,7 @@ export default function Dashboard() {
                   <th>Contato</th>
                   <th>Especialidade</th>
                   <th>Observações</th>
+                  <th>Cadastrado em</th>
                   <th>Ações</th>
                 </tr>
               </thead>
@@ -157,6 +179,11 @@ export default function Dashboard() {
                     <td>
                       <span className={styles.obs}>
                         {patient.observations || '—'}
+                      </span>
+                    </td>
+                    <td>
+                      <span className={styles.date}>
+                        {formatDate(patient.createdAt)}
                       </span>
                     </td>
                     <td>
