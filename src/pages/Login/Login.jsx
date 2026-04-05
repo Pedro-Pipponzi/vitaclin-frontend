@@ -88,7 +88,7 @@ export default function Login() {
           </h1>
           <p className={styles.sub}>
             Gestão de pacientes simples,<br />
-            humana e eficiente.
+            eficiente e personalizada.
           </p>
           <div className={styles.badges}>
             <span className={styles.badge}>Fisioterapia</span>
