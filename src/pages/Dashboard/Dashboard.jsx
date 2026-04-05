@@ -157,11 +157,15 @@ export default function Dashboard() {
                 {filtered.map((patient) => (
                   <tr key={patient._id}>
                     <td>
-                      <div className={styles.patientName}>
+                      <div
+                        className={styles.patientName}
+                        onClick={() => navigate(`/patients/${patient._id}`)}
+                        style={{ cursor: 'pointer' }}
+                      >
                         <div className={styles.avatar}>
                           {patient.name.charAt(0).toUpperCase()}
                         </div>
-                        {patient.name}
+                        <span className={styles.nameLink}>{patient.name}</span>
                       </div>
                     </td>
                     <td>{formatDate(patient.birthDate)}</td>

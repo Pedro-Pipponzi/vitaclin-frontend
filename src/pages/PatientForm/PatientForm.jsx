@@ -61,6 +61,25 @@ export default function PatientForm() {
     }
   };
 
+  const handleBirthDateChange = (e) => {
+    let input = e.target.value;
+    input = input.replace(/[^\d/]/g, '');
+    const raw = input.replace(/\//g, '');
+
+    if (raw.length > 8) return;
+
+    let formatted = raw;
+    if (raw.length > 2) {
+      formatted = raw.slice(0, 2) + '/' + raw.slice(2);
+    }
+    if (raw.length > 4) {
+      formatted = raw.slice(0, 2) + '/' + raw.slice(2, 4) + '/' + raw.slice(4);
+    }
+
+    setForm((prev) => ({ ...prev, birthDate: formatted }));
+    if (errors.birthDate) setErrors((prev) => ({ ...prev, birthDate: '' }));
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     const validationErrors = validate();
@@ -70,9 +89,13 @@ export default function PatientForm() {
     }
 
     setLoading(true);
+
+    const [day, month, year] = form.birthDate.split('/');
+    const formattedDate = `${year}-${month}-${day}`;
+
     const payload = {
       name: form.name,
-      birthDate: form.birthDate,
+      birthDate: formattedDate,
       contact: {
         phone: form.phone,
         email: form.email,
@@ -162,9 +185,11 @@ export default function PatientForm() {
                   <input
                     className={`${styles.input} ${errors.birthDate ? styles.inputError : ''}`}
                     name="birthDate"
-                    type="date"
+                    type="text"
+                    placeholder="DD/MM/AAAA"
                     value={form.birthDate}
-                    onChange={handleChange}
+                    onChange={handleBirthDateChange}
+                    maxLength={10}
                   />
                   {errors.birthDate && <span className={styles.errorMsg}>{errors.birthDate}</span>}
                 </div>

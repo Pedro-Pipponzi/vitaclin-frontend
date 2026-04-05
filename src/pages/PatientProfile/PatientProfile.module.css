@@ -1,0 +1,214 @@
+.page {
+  min-height: 100vh;
+  background: var(--cream);
+}
+
+.main {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem;
+  color: var(--text-muted);
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.backBtn {
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0;
+  transition: opacity 0.15s;
+}
+
+.backBtn:hover {
+  opacity: 0.75;
+}
+
+.sep {
+  color: var(--warm-200);
+}
+
+.card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--warm-200);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.cardHeader {
+  padding: 2rem 2.5rem;
+  background: var(--cream);
+  border-bottom: 1px solid var(--warm-100);
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--warm-100);
+  border: 2px solid var(--warm-200);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.headerInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.name {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  letter-spacing: -0.3px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 100px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  width: fit-content;
+}
+
+.tagFisio {
+  background: #EAF4EA;
+  color: #3A6B3C;
+}
+
+.tagNutri {
+  background: #FEF3E2;
+  color: #B06A10;
+}
+
+.tagPsico {
+  background: #EEE8F8;
+  color: #6B3FA0;
+}
+
+.headerActions {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.editBtn {
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 10px 22px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: all 0.2s;
+  box-shadow: 0 2px 8px rgba(193,123,63,0.3);
+}
+
+.editBtn:hover {
+  background: var(--accent-dark);
+  transform: translateY(-1px);
+}
+
+.cardBody {
+  padding: 2rem 2.5rem;
+}
+
+.section {
+  margin-bottom: 2rem;
+}
+
+.section:last-child {
+  margin-bottom: 0;
+}
+
+.sectionTitle {
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--text-muted);
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--warm-100);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.fieldLabel {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.fieldValue {
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  font-weight: 400;
+}
+
+.observations {
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  line-height: 1.7;
+  background: var(--cream);
+  border: 1px solid var(--warm-100);
+  border-radius: var(--radius-sm);
+  padding: 1rem 1.2rem;
+}
+
+@media (max-width: 600px) {
+  .main {
+    padding: 1.5rem 1rem;
+  }
+  .cardHeader {
+    padding: 1.5rem;
+    flex-wrap: wrap;
+  }
+  .cardBody {
+    padding: 1.5rem;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

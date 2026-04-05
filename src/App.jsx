@@ -4,6 +4,7 @@ import PrivateRoute from './components/PrivateRoute';
 import Login from './pages/Login/Login';
 import Dashboard from './pages/Dashboard/Dashboard';
 import PatientForm from './pages/PatientForm/PatientForm';
+import PatientProfile from './pages/PatientProfile/PatientProfile';
 import './styles/index.css';
 
 export default function App() {
@@ -33,6 +34,14 @@ export default function App() {
             element={
               <PrivateRoute>
                 <PatientForm />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/patients/:id"
+            element={
+              <PrivateRoute>
+                <PatientProfile />
               </PrivateRoute>
             }
           />

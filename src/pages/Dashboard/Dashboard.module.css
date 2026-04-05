@@ -406,3 +406,12 @@
   font-size: 0.85rem;
   color: var(--text-muted);
 }
+.nameLink {
+  color: var(--text-primary);
+  transition: color 0.15s;
+}
+
+.patientName:hover .nameLink {
+  color: var(--accent);
+  text-decoration: underline;
+}
