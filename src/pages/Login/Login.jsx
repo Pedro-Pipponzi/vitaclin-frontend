@@ -8,6 +8,7 @@ export default function Login() {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
+  const [showForgot, setShowForgot] = useState(false);
   const { login } = useAuth();
   const navigate = useNavigate();
 
@@ -24,6 +25,54 @@ export default function Login() {
       setLoading(false);
     }
   };
+  if (showForgot) {
+    return (
+      <div className={styles.page}>
+        <div className={styles.left}>
+          <div className={styles.leftContent}>
+            <div className={styles.brand}>
+              <span className={styles.brandIcon}>✦</span>
+              <span className={styles.brandName}>VitaClin</span>
+            </div>
+            <h1 className={styles.headline}>
+              Recuperar<br />
+              <em>acesso</em>
+            </h1>
+            <p className={styles.sub}>
+              Enviaremos as instruções<br />
+              para o seu e-mail cadastrado.
+            </p>
+          </div>
+        </div>
+        <div className={styles.right}>
+          <div className={styles.card}>
+            <h2 className={styles.title}>Recuperar senha</h2>
+            <p className={styles.subtitle}>Digite seu e-mail para receber as instruções</p>
+            <div className={styles.form}>
+              <div className={styles.field}>
+                <label className={styles.label}>E-mail</label>
+                <input
+                  className={styles.input}
+                  type="email"
+                  placeholder="seu@email.com"
+                />
+              </div>
+              <button className={styles.btn}>
+                Enviar instruções
+              </button>
+              <button
+                type="button"
+                className={styles.forgotBtn}
+                onClick={() => setShowForgot(false)}
+              >
+                ← Voltar para o login
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className={styles.page}>
@@ -91,6 +140,13 @@ export default function Login() {
               disabled={loading}
             >
               {loading ? 'Entrando...' : 'Entrar'}
+            </button>
+            <button
+              type="button"
+              className={styles.forgotBtn}
+              onClick={() => setShowForgot(true)}
+            >
+              Esqueci minha senha
             </button>
           </form>
         </div>
